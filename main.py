@@ -18,11 +18,8 @@ def main():
     org_lon = float(point[1])
     point_param = f"pt={org_lat},{org_lon},pm2dgl"
 
-    show_map(f"ll={address_ll}&spn={span}", "map", add_params=point_param)
-
     points_param = point_param + f"~{address_ll},pm2rdl"
 
-    show_map("ll={0}&spn={1}".format(address_ll, span), "map", add_params=points_param)
     show_map(map_type="map", add_params=points_param)
 
     name = organization["properties"]["CompanyMetaData"]["name"]
